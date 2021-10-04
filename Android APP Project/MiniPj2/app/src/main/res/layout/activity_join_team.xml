@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinTeamActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="711dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="프로젝트 협업 도우미"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Project Collaboration Helper"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="405dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="104dp"
+                    android:layout_height="109dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#03A9F4"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/join_icon" />
+
+                <LinearLayout
+                    android:layout_width="257dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="팀 참가(Join Team)"
+                        android:textSize="27dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/leaderidText"
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#03A9F4"
+                        android:drawableLeft="@drawable/login_icon"
+                        android:hint=" 아이디"
+                        android:padding="10dp"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/JoinTeamButton"
+                android:layout_width="361dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="#DADADA"
+                android:text="참가하기" />
+        </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,282 @@
+
+2020-09-01 18:15:43 Commons Daemon procrun stderr initialized
+01-Sep-2020 18:15:44.897 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2016 18:22:47 UTC
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jre1.8.0_261
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_261-b12
+01-Sep-2020 18:15:44.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\temp
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\conf\logging.properties
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: exit
+01-Sep-2020 18:15:44.899 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms128m
+01-Sep-2020 18:15:44.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx256m
+01-Sep-2020 18:15:44.900 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NAT Service;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files\Java\jdk-11.0.6\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\MinGW\bin;C:\Users\cxv96\AppData\Local\Microsoft\WindowsApps;C:\Users\cxv96\.dotnet\tools;.
+01-Sep-2020 18:15:45.232 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:15:45.244 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["http-nio-8080"]
+ java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:866)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:558)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:65)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1010)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:873)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:606)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+
+01-Sep-2020 18:15:45.245 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8080]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:873)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:606)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1013)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:866)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:558)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:65)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1010)
+	... 13 more
+
+01-Sep-2020 18:15:45.246 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 18:15:45.448 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Sep-2020 18:15:45.450 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 826 ms
+01-Sep-2020 18:15:45.472 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+01-Sep-2020 18:15:45.472 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:15:45.477 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs
+01-Sep-2020 18:15:45.664 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs has finished in 186 ms
+01-Sep-2020 18:15:45.664 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager
+01-Sep-2020 18:15:45.696 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager has finished in 32 ms
+01-Sep-2020 18:15:45.696 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT
+01-Sep-2020 18:15:45.712 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT has finished in 16 ms
+01-Sep-2020 18:15:45.714 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+01-Sep-2020 18:15:45.717 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 266 ms
+01-Sep-2020 18:23:31.320 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:23:31.321 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 18:23:31.375 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+01-Sep-2020 18:23:31.386 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+
+2020-09-01 18:23:34 Commons Daemon procrun stderr initialized
+01-Sep-2020 18:23:34.670 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2016 18:22:47 UTC
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jre1.8.0_261
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_261-b12
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Sep-2020 18:23:34.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\temp
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\conf\logging.properties
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: exit
+01-Sep-2020 18:23:34.672 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms128m
+01-Sep-2020 18:23:34.673 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx256m
+01-Sep-2020 18:23:34.673 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NAT Service;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files\Java\jdk-11.0.6\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\MinGW\bin;C:\Users\cxv96\AppData\Local\Microsoft\WindowsApps;C:\Users\cxv96\.dotnet\tools;.
+01-Sep-2020 18:23:34.749 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:23:34.756 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["http-nio-8080"]
+ java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:866)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:558)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:65)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1010)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:873)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:606)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+
+01-Sep-2020 18:23:34.757 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8080]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:873)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:606)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1013)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:866)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:558)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:65)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1010)
+	... 13 more
+
+01-Sep-2020 18:23:34.757 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 18:23:34.932 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Sep-2020 18:23:34.933 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 439 ms
+01-Sep-2020 18:23:34.947 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+01-Sep-2020 18:23:34.947 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:23:34.952 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs
+01-Sep-2020 18:23:35.094 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs has finished in 141 ms
+01-Sep-2020 18:23:35.094 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager
+01-Sep-2020 18:23:35.117 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager has finished in 23 ms
+01-Sep-2020 18:23:35.117 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT
+01-Sep-2020 18:23:35.127 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT has finished in 10 ms
+01-Sep-2020 18:23:35.129 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+01-Sep-2020 18:23:35.133 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 199 ms
+01-Sep-2020 18:27:31.267 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:27:31.267 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 18:27:31.320 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+01-Sep-2020 18:27:31.329 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+
+2020-09-01 18:27:34 Commons Daemon procrun stderr initialized
+01-Sep-2020 18:27:34.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:27:34.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2016 18:22:47 UTC
+01-Sep-2020 18:27:34.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+01-Sep-2020 18:27:34.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+01-Sep-2020 18:27:34.785 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jre1.8.0_261
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_261-b12
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\temp
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\conf\logging.properties
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: exit
+01-Sep-2020 18:27:34.786 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms128m
+01-Sep-2020 18:27:34.788 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx256m
+01-Sep-2020 18:27:34.788 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NAT Service;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files\Java\jdk-11.0.6\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\MinGW\bin;C:\Users\cxv96\AppData\Local\Microsoft\WindowsApps;C:\Users\cxv96\.dotnet\tools;.
+01-Sep-2020 18:27:34.863 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:27:35.042 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Sep-2020 18:27:35.044 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 18:27:35.045 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Sep-2020 18:27:35.045 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 438 ms
+01-Sep-2020 18:27:35.059 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+01-Sep-2020 18:27:35.059 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:27:35.063 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs
+01-Sep-2020 18:27:35.199 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs has finished in 135 ms
+01-Sep-2020 18:27:35.199 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager
+01-Sep-2020 18:27:35.220 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager has finished in 21 ms
+01-Sep-2020 18:27:35.220 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT
+01-Sep-2020 18:27:35.230 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT has finished in 10 ms
+01-Sep-2020 18:27:35.232 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+01-Sep-2020 18:27:35.235 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+01-Sep-2020 18:27:35.236 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 191 ms
+01-Sep-2020 18:39:59.650 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:39:59.703 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 18:39:59.753 INFO [Thread-6] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+01-Sep-2020 18:39:59.767 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:39:59.768 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+
+2020-09-01 18:40:03 Commons Daemon procrun stderr initialized
+01-Sep-2020 18:40:04.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2016 18:22:47 UTC
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jre1.8.0_261
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_261-b12
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:40:04.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:40:04.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:40:04.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0
+01-Sep-2020 18:40:04.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\temp
+01-Sep-2020 18:40:04.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Sep-2020 18:40:04.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\conf\logging.properties
+01-Sep-2020 18:40:04.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: exit
+01-Sep-2020 18:40:04.363 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms128m
+01-Sep-2020 18:40:04.364 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx256m
+01-Sep-2020 18:40:04.364 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NAT Service;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files\Java\jdk-11.0.6\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\MinGW\bin;C:\Users\cxv96\AppData\Local\Microsoft\WindowsApps;C:\Users\cxv96\.dotnet\tools;.
+01-Sep-2020 18:40:04.442 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 18:40:04.626 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Sep-2020 18:40:04.627 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 18:40:04.628 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Sep-2020 18:40:04.628 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 450 ms
+01-Sep-2020 18:40:04.643 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+01-Sep-2020 18:40:04.643 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M9
+01-Sep-2020 18:40:04.648 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs
+01-Sep-2020 18:40:04.788 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\docs has finished in 140 ms
+01-Sep-2020 18:40:04.788 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager
+01-Sep-2020 18:40:04.811 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\manager has finished in 23 ms
+01-Sep-2020 18:40:04.812 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT
+01-Sep-2020 18:40:04.822 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\바탕화면\2학년\2학기\서버구축관리\WebSoft\Tomcat9.0\webapps\ROOT has finished in 10 ms
+01-Sep-2020 18:40:04.823 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+01-Sep-2020 18:40:04.827 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+01-Sep-2020 18:40:04.828 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 199 ms
+01-Sep-2020 19:01:03.578 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 19:01:03.631 INFO [Thread-6] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Sep-2020 19:01:03.681 INFO [Thread-6] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+01-Sep-2020 19:01:03.693 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Sep-2020 19:01:03.695 INFO [Thread-6] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]

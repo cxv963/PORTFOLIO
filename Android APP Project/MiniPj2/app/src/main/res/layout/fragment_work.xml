@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/work_custom"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"></ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/writeButton"
+                android:layout_width="204dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#DADADA"
+                android:scaleType="center"
+                android:src="@drawable/write_icon" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="209dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#DADADA"
+                android:scaleType="center"
+                android:src="@drawable/delete_icon" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

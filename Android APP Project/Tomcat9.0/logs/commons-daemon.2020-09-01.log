@@ -1,0 +1,51 @@
+[2020-09-01 18:13:47] [info]  [26472] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:13:47] [info]  [26472] Service Tomcat9 name Apache Tomcat 9.0 Tomcat9
+[2020-09-01 18:13:47] [info]  [26472] Service 'Tomcat9' installed
+[2020-09-01 18:13:47] [info]  [26472] Commons Daemon procrun finished
+[2020-09-01 18:13:48] [info]  [17224] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:13:48] [info]  [17224] Updating service...
+[2020-09-01 18:13:49] [info]  [17224] Service 'Tomcat9' updated
+[2020-09-01 18:13:49] [info]  [17224] Update service finished.
+[2020-09-01 18:13:49] [info]  [17224] Commons Daemon procrun finished
+[2020-09-01 18:13:49] [info]  [17960] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:13:49] [info]  [17960] Updating service...
+[2020-09-01 18:13:49] [info]  [17960] Service 'Tomcat9' updated
+[2020-09-01 18:13:49] [info]  [17960] Update service finished.
+[2020-09-01 18:13:49] [info]  [17960] Commons Daemon procrun finished
+[2020-09-01 18:13:50] [info]  [21912] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:13:50] [info]  [21912] Updating service...
+[2020-09-01 18:13:50] [info]  [21912] Service 'Tomcat9' updated
+[2020-09-01 18:13:50] [info]  [21912] Update service finished.
+[2020-09-01 18:13:50] [info]  [21912] Commons Daemon procrun finished
+[2020-09-01 18:15:43] [info]  [28476] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:15:43] [info]  [28476] Running 'Tomcat9' Service...
+[2020-09-01 18:15:43] [info]  [ 2188] Starting service...
+[2020-09-01 18:15:45] [info]  [ 2188] Service started in 1282 ms.
+[2020-09-01 18:23:31] [info]  [13436] Stopping service...
+[2020-09-01 18:23:32] [info]  [13436] Service stop thread completed.
+[2020-09-01 18:23:32] [info]  [28476] Run service finished.
+[2020-09-01 18:23:32] [info]  [28476] Commons Daemon procrun finished
+[2020-09-01 18:23:34] [info]  [20780] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:23:34] [info]  [20780] Running 'Tomcat9' Service...
+[2020-09-01 18:23:34] [info]  [13268] Starting service...
+[2020-09-01 18:23:35] [info]  [13268] Service started in 1101 ms.
+[2020-09-01 18:27:31] [info]  [26400] Stopping service...
+[2020-09-01 18:27:32] [info]  [26400] Service stop thread completed.
+[2020-09-01 18:27:32] [info]  [20780] Run service finished.
+[2020-09-01 18:27:32] [info]  [20780] Commons Daemon procrun finished
+[2020-09-01 18:27:34] [info]  [16528] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:27:34] [info]  [16528] Running 'Tomcat9' Service...
+[2020-09-01 18:27:34] [info]  [21100] Starting service...
+[2020-09-01 18:27:35] [info]  [21100] Service started in 1101 ms.
+[2020-09-01 18:39:59] [info]  [20024] Stopping service...
+[2020-09-01 18:40:00] [info]  [20024] Service stop thread completed.
+[2020-09-01 18:40:01] [info]  [16528] Run service finished.
+[2020-09-01 18:40:01] [info]  [16528] Commons Daemon procrun finished
+[2020-09-01 18:40:03] [info]  [ 1584] Commons Daemon procrun (1.0.15.0 64-bit) started
+[2020-09-01 18:40:03] [info]  [ 1584] Running 'Tomcat9' Service...
+[2020-09-01 18:40:03] [info]  [20112] Starting service...
+[2020-09-01 18:40:05] [info]  [20112] Service started in 1105 ms.
+[2020-09-01 19:01:03] [info]  [15380] Stopping service...
+[2020-09-01 19:01:04] [info]  [15380] Service stop thread completed.
+[2020-09-01 19:01:04] [info]  [ 1584] Run service finished.
+[2020-09-01 19:01:04] [info]  [ 1584] Commons Daemon procrun finished
