@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- thymeleaf를 사용, layout/default에 적용되어있는 레이아웃을 사용할 것. -->
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<div layout:fragment="content">
+
+	<div class="container">
+	&nbsp;&nbsp;
+		<h2 style="color: white;">게시판 리스트</h2>
+		
+		<!-- 검색 영역 시작-->
+		<form action="/board/search" class="form-inline d-flex justify-content-end" method="GET">
+			<select name="searchtype" id="searchtype" class="form-control" style="width:100px;">
+  					<option th:value="id" th:text="id"></option>
+  					<option th:value="title" th:text="title"></option>
+  			</select>
+  			&nbsp;
+			<input type="search" id="keyword" name="keyword" >
+			<button type="submit">Search</button>
+		</form>
+		<br>
+		<!-- 검색 영역 끝 -->
+
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th style="color: white;">글번호</th>
+					<th style="color: white;">제목</th>
+					<th style="color: white;">작성자</th>
+					<th style="color: white;">조회수</th>
+					<th style="color: white;">작성일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:if="${#lists.size(list)} >0" th:each="vo : ${list}"> <!-- 데이터가 한 개 이상있는 경우 -->
+					<td th:text='${vo.boardIdx}'  style="color: white;"></td>
+					<td class="title"  style="color: white;">
+						<a href="/board/boardDetail/" th:attrappend="href=${vo.boardIdx}" th:text='${vo.title}'></a>
+					</td>
+					<td th:text='${vo.createId}' style="color: white;"></td>
+					<td th:text='${vo.hitCnt}' style="color: white;"></td>
+					<td th:text='${vo.createDate}' style="color: white;"></td>
+				</tr>
+				<tr th:unless="${#lists.size(list)} >0"> <!-- 데이터가 없는 경우 -->
+					<td colspan="4">조회된 결과가 없습니다.</td>
+				</tr>
+			</tbody>
+		</table>
+		<button type ="button" class="btn btn-outline-secondary" style="float:right;" > 
+			<a href="/board/boardInsert">글 작성</a>
+		</button>
+	</div>
+	
+	            <nav id="pag" style="text-align: center;">
+                <ul class="pagination justify-content-center"
+                    th:with="start=${T(Math).floor(list.number/10)*10 + 1},
+                    last=(${start + 9 < list.totalPages ? start + 9 : list.totalPages})">
+                    
+                    <li class="page-item">
+                        <a class="page-link" th:href="@{/board/boardList(page=1)}" aria-label="First">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item" th:class="${list.first} ? 'disabled'">
+                        <a class="page-link" th:href="${list.first} ? '#' :@{/board/boardList(page=${list.number})}" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item" th:each="page: ${#numbers.sequence(start, last)}" th:class="${page == list.number + 1} ? 'active'">
+                        <a class="page-link" th:text="${page}" th:href="@{/board/boardList(page=${page})}"></a>
+                    </li>
+
+                    <li class="page-item" th:class="${list.last} ? 'disabled'">
+                        <a class="page-link" th:href="${list.last} ? '#' : @{/board/boardList(page=${list.number + 2})}" aria-label="Next">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link" th:href="@{/board/boardList(page=${list.totalPages})}" aria-label="Last">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+</div>
+</html>

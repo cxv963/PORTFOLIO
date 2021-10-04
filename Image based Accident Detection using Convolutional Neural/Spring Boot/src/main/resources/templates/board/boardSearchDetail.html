@@ -1,0 +1,55 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<div layout:fragment="content">
+	<!-- 사용자 정보 수정 -->
+	<div class="container">
+	&nbsp;&nbsp;
+		<h2 style="color: white;">사용자 상세</h2>
+		<br>
+
+		<!-- id보다 name이 중요함 -->
+		<form role="form" th:method="POST"
+			th:action="'/board/boardSearchUpdate/' + ${board.boardIdx}">
+			
+		<div class="input-group mb-3">
+			<span class="input-group-text" id="inputGroup-sizing-sm" th:text="'글번호 : '+${board.boardIdx}" ></span>
+  			<span class="input-group-text" id="btitle" >제목</span>
+ 			<input type="text" class="form-control" id="title" name="title" th:value="${board.title}">
+ 			<span class="input-group-text" id="inputGroup-sizing-sm" th:text="'작성자 : '+${board.createId}" ></span>
+			<span class="input-group-text" id="inputGroup-sizing-sm" th:text="'조회수 : '+${board.hitCnt}" ></span>
+			<span class="input-group-text" id="bdate" th:text="'작성일 : '+${board.createDate}" ></span>
+		</div>	
+		
+		<div class="input-group mb-3">
+			<textarea class="form-control col-sm-3" rows="6"  id="contents" name="contents" th:text="${board.contents}"></textarea>
+		</div>	
+		
+		<input type="submit" id="submit" value="수정" class="btn btn-outline-primary" style="float:right;">
+		
+		<button class="btn btn-outline-primary" style="float:right;">
+			<a th:href="@{'/board/search?keyword='+${keyword}+'&page='+${page}}">리스트</a>
+		</button>
+		
+		<button class="btn btn-outline-primary" style="float:right;">
+			<a href="/board/boardSearchDelete/" th:attrappend="href=${board.boardIdx}">삭제</a>
+		</button>
+		
+		</form>
+
+	</div>
+</div>
+</html>
+
+

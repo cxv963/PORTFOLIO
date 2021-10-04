@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+	<!-- DEBUG 용 -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!--<Pattern>%d %5p [%c] %m%n</Pattern>  -->
+			<Pattern>[%5p] [%c] %m%n</Pattern>
+			<!--<Pattern>[%5p] %m%n</Pattern>  -->
+		</encoder>
+	</appender>
+	
+	<!-- INFO 용 -->
+	<appender name="console-infolog" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d %5p %m%n</Pattern>
+		</encoder>
+	</appender>
+	
+	<!-- 로거 -->
+	<logger name="board" level="DEBUG" appender-ref="console"/>
+	<!-- SQL 보여주기 -->
+	<logger name="jdbc.sqlonly" level="INFO" appender-ref="console-infolog"/>
+	<!-- 조회 결과를 테이블로 보여주기 -->
+	<logger name="jdbc.resultsettable" level="INFO" appender-ref="console-infolog"/>
+	
+	<!-- 루트 로거 -->
+	<root level="DEBUG"> <!-- 개발 할 때는 디버그, 운영할 때는 인포 -->
+		<appender-ref ref="console"/>
+	</root>
+	
+</configuration>

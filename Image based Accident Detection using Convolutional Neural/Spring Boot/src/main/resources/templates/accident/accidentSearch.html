@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<div layout:fragment="content">
+
+	<div class="container">
+		&nbsp;&nbsp;
+		<h2 style="color: white;">사고 리스트</h2>
+
+		<!-- 검색 영역 시작-->
+		<div class="search">
+			<form action="/accident/search"
+				class="form-inline d-flex justify-content-end" method="GET">
+			<select name="searchtype" id="searchtype" class="form-control" style="width:100px;">
+  					<option th:value="id" th:text="id"></option>
+  					<option th:value="title" th:text="title"></option>
+  			</select>
+  			&nbsp;
+				<input type="search" id="keyword" name="keyword"
+					th:value='${keyword}'>
+				<button type="submit">Search</button>
+			</form>
+		</div>
+		<!-- 검색 영역 끝 -->
+
+		<br>
+
+
+
+
+		<div class="acimage" style="float: left;"
+			th:if="${#lists.size(searchList)} >0" th:each="vo : ${searchList}">
+			<a th:href="@{/accident/accidentSearchDetail/{id}(id=${vo.id})}">
+				<img th:src="'/images/'+${vo.filename}" width="200px" height="200">
+			</a>
+		</div>
+		
+	</div>
+
+	<div class="sappendImage">
+		<button type="button" class="btn btn-outline-secondary">
+			<a href="/accident/accidentInsert">이미지 추가</a>
+		</button>
+	</div>
+
+	<nav id="pag" style="text-align: center;">
+		<ul class="pagination justify-content-center"
+			th:with="start=${T(Math).floor(searchList.number/10)*10 + 1},
+                    last=(${start + 9 < searchList.totalPages ? start + 9 : searchList.totalPages})">
+
+			<li class="page-item"><a class="page-link"
+				th:href="@{'/accident/search?keyword='+${keyword}+'&page=1'}"
+				aria-label="First"> <span aria-hidden="true">&laquo;</span>
+			</a></li>
+
+			<li class="page-item" th:class="${searchList.first} ? 'disabled'">
+				<a class="page-link"
+				th:href="${searchList.first} ? '#' :@{'/accident/search?keyword='+${keyword}+'&page='+${searchList.number}}"
+				aria-label="Previous"> <span aria-hidden="true">&lt;</span>
+			</a>
+			</li>
+
+			<li class="page-item"
+				th:each="page: ${#numbers.sequence(start, last)}"
+				th:class="${page == searchList.number + 1} ? 'active'"><a
+				class="page-link" th:text="${page}"
+				th:href="@{'/accident/search?keyword='+${keyword}+'&page='+${page}}"></a>
+			</li>
+
+			<li class="page-item" th:class="${searchList.last} ? 'disabled'">
+				<a class="page-link"
+				th:href="${searchList.last} ? '#' : @{'/accident/search?keyword='+${keyword}+'&page='+${searchList.number + 2}}"
+				aria-label="Next"> <span aria-hidden="true">&gt;</span>
+			</a>
+			</li>
+
+			<li class="page-item"><a class="page-link"
+				th:href="@{'/accident/search?keyword='+${keyword}+'&page='+${searchList.totalPages}}"
+				aria-label="Last"> <span aria-hidden="true">&raquo;</span>
+			</a></li>
+		</ul>
+	</nav>
+
+
+</div>
+</html>
+
+
+
+<!--  
+<!DOCTYPE html>
+<html lang='ko' xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>사용자 리스트</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link><!-- 타임리프에서 하이퍼링크를 따로 걸어줌.
+</head>
+<body>
+</body>
+</html>-->

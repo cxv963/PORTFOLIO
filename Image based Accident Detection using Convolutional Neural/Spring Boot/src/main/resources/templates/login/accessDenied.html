@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<body th:align="center" style="vertical-align : middle;">
+	<div id="accessDenied">
+		<h1>죄송합니다. 페이지에 대한 접근 권한이 없습니다.</h1>
+		<h3>다시 로그인 하세요.</h3>
+		<h4>로그인을 원하시면 <a th:href="@{/login/login}">여기</a>를 누르세요</h4>
+	</div>
+</body>
+</html>

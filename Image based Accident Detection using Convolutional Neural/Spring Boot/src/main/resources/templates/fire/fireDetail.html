@@ -1,0 +1,86 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<div layout:fragment="content" >
+<div class="container">
+		<br>
+		<h2 style="color: white;">상세페이지</h2>
+		<br>
+		
+		<div class="input-group mb-3">
+  			<span class="input-group-text" id="btitle" >제목</span>
+ 			<input type="text" class="form-control" id="title" name="title" th:value="${fire.title}">
+ 			<span class="input-group-text" id="inputGroup-sizing-sm" th:text="'작성자 : '+${fire.id}" ></span>
+			<span class="input-group-text" id="bdate" th:text="'작성일 : '+${fire.joinDate}" ></span>
+		</div>	
+		
+		<form role="form" th:method="POST" th:action="'/fire/fireUpdate/' + ${fire.id}" enctype="multipart/form-data" method="post">	
+			<div class="img">
+				<input type=file name='file1' id='file1' style='display: none;'> 
+				<input type='text' name='file2' id='file2' style='display: none;'> 
+				<img style="width: 250px;" id="preview-image" th:src="'/images/'+${file.filename}"
+				onload="resize(this)"
+				onclick='document.all.file1.click(); document.all.file2.value=document.all.file1.value'>
+				<br><br>
+			</div>
+			
+			<br>
+			<div>
+				<input type="submit" id="submit" value="수정" class="btn btn-outline-primary" style="float:right;">
+				
+				<button type="button" class="btn btn-outline-primary" style="float:right;">
+					<a th:href="@{/fire/fireList(page=${page})}">리스트 </a>
+				</button>
+				
+				<button type="button" class="btn btn-outline-primary" style="float:right;">
+					<a href="/fire/fireDelete/" th:attrappend="href=${fire.id}">삭제</a>
+				</button>
+			</div>
+			
+
+		</form>
+	</div>
+</div>
+</html>
+
+
+<script type="text/javascript">
+function readImage(input) {
+
+    // 인풋 태그에 파일이 있는 경우
+    if(input.files && input.files[0]) {
+
+        // 이미지 파일인지 검사 (생략)
+
+        // FileReader 인스턴스 생성
+        const reader = new FileReader()
+
+        // 이미지가 로드가 된 경우
+        reader.onload = e => {
+            const previewImage = document.getElementById("preview-image")
+            previewImage.src = e.target.result
+        }
+
+        // reader가 이미지 읽도록 하기
+        reader.readAsDataURL(input.files[0])
+    }
+}
+
+// input file에 change 이벤트 부여
+const inputImage = document.getElementById("file1")
+inputImage.addEventListener("change", e => {
+    readImage(e.target)
+})
+</script>

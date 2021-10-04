@@ -1,0 +1,122 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<div layout:fragment="content">
+	<div class="container">
+		<br>
+		<h2 style="color: white;">사용자 등록</h2>
+		<br>
+		
+		<form id="frm" name="frm" method="POST" action="/user/userInsert"
+			enctype="multipart/form-data">
+			
+			<div class="imga" style="float:left;">
+				<input type=file name='file1' id='file1' style='display: none;'> 
+				<input type='text' name='file2' id='file2' style='display: none;'> 
+				<img style="width: 250px; height:310px;" id="preview-image" src="https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image" 
+				onload="resize(this)"
+				onclick='document.all.file1.click(); document.all.file2.value=document.all.file1.value'>
+				<br><br>
+			</div>
+			
+			
+
+			<div class="input-group mb-3" style="width: 1030px; margin-left:10px;">
+  				<span class="input-group-text" id="inputGroup-sizing-sm" >아이디</span>
+ 				 <input type="text" class="form-control" id="id" name="id">
+			</div>
+			<div class="input-group mb-3" style="width: 1030px; margin-left:10px;">
+  				<span class="input-group-text" id="inputGroup-sizing-sm" >패스워드</span>
+ 				 <input type="text" class="form-control" id="pw" name="pw">
+			</div>
+			<div class="input-group mb-3" style="width: 1030px; margin-left:10px;">
+  				<span class="input-group-text" id="inputGroup-sizing-sm">이름</span>
+ 				 <input type="text" class="form-control" id="name" name="name">
+			</div>
+			<div class="input-group mb-3" style="width: 1030px; margin-left:10px;">
+  					<span class="input-group-text" id="inputGroup-sizing-sm">이메일</span>
+ 				 <input type="text" class="form-control" id="email" name="email">
+			</div>
+			
+			<div class="input-group mb-3" style="width: 1030px; margin-left:10px;">
+  				<span class="input-group-text" id="inputGroup-sizing-sm">권한</span>
+  				<select name="role" id="inputState" class="form-control">
+  					<th:block th:each="authorityList : ${map.authorityList}">
+  						<option th:value="${authorityList}" th:text="${authorityList}"></option>
+  					</th>
+  				</select>
+			</div>
+			
+			<div class="input-group mb-3" style="width: 1030px; margin-left:10px;">
+				<span class="input-group-text" id="inputGroup-sizing-sm">사용여부</span>
+				<th:block th:each="enabledName : ${map.enabledList}"></th>
+				<div class="from-check">
+					&nbsp;
+					<input class="form-check-input" type="radio" name="enabled" id="enabled" th:value="${enabledNmae}">
+					<label class="form-check-label" th:text="${enabledName}"></label>
+					</div>
+				</th:block>
+			</div>
+			<br>
+			
+			
+			<button type="button" class="btn btn-outline-primary" style="float:right;">
+				<a href="/user/userList">취소</a>
+			</button>
+			
+			<input type="submit" id="submit" value="저장" class="btn btn-outline-primary" style="float:right;" >
+			
+		</form>
+	</div>
+</div>
+</html>
+
+<script type="text/javascript">
+function readImage(input) {
+
+    // 인풋 태그에 파일이 있는 경우
+    if(input.files && input.files[0]) {
+
+        // 이미지 파일인지 검사 (생략)
+
+        // FileReader 인스턴스 생성
+        const reader = new FileReader()
+
+        // 이미지가 로드가 된 경우
+        reader.onload = e => {
+            const previewImage = document.getElementById("preview-image")
+            previewImage.src = e.target.result
+        }
+
+        // reader가 이미지 읽도록 하기
+        reader.readAsDataURL(input.files[0])
+    }
+}
+
+function resize(img){
+
+	   // 리사이즈한 크기로 이미지 크기 다시 지정
+	   img.width = 250;
+	   img.height = 250;
+}
+
+
+
+
+// input file에 change 이벤트 부여
+const inputImage = document.getElementById("file1")
+inputImage.addEventListener("change", e => {
+    readImage(e.target)
+})
+</script>

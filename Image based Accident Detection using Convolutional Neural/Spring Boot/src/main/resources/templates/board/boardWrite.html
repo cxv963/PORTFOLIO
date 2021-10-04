@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<div layout:fragment="content">
+	<div class="container">
+	<br>
+	<h2 style="color: white;">게시판 작성</h2>
+	<br>
+		<!-- id보다 name이 중요함 -->
+		<form id="frm" name="frm" method="POST" action="/board/boardInsert"
+			enctype="multipart/form-data">
+			
+			<div class="input-group mb-3">
+  				<span class="input-group-text" id="inputGroup-sizing-sm" >제목</span>
+ 				 <input type="text" class="form-control" id="title" name="title">
+			</div>
+			
+			<div class="input-group mb-3">
+			 <textarea class="form-control col-sm-3" rows="6"  id="contents" name="contents">
+			 </textarea>
+			</div>
+			
+			<div class="form-group row" style="margin-left: 1300px;">
+				<div class="col-sm-10">
+					<div class="custom-file" id="inputFile"style="width:450px; float:right;">
+						<strong style="color: white;">첨부파일</strong>
+						<input name="file" type="file" class="custom-file-input" id="customFile" style="color: white;" >
+						<input type="submit" id="submit" value="저장"  class="btn btn-outline-primary">
+					</div>
+				</div>
+			</div>
+			
+		</form>
+	</div>
+
+</div>
+</html>

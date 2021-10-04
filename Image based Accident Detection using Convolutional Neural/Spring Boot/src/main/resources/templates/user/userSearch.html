@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+<body style="background-color: rgb(51, 51, 51);">
+</body>
+
+<div layout:fragment="content">
+
+<div class="container">
+&nbsp;&nbsp;
+	<h2 style="color: white;">사용자 리스트</h2>
+	
+			<!-- 검색 영역 시작-->
+		<form action="/user/search" class="form-inline d-flex justify-content-end" method="GET">
+			 <select name="searchtype" id="searchtype" class="form-control" style="width:100px;">
+  					<option th:value="id" th:text="id"></option>
+  					<option th:value="name" th:text="name"></option>
+  					<option th:value="role" th:text="role"></option>
+  			</select>
+  			&nbsp;
+			<input type="search" id="keyword" name="keyword" th:value='${keyword}'>
+			<button type="submit">Search</button>
+		</form>
+		<!-- 검색 영역 끝 -->
+	
+	
+	
+		<table class="table table-hover">
+			<colgroup>
+				<col widht="10%"/>
+				<col widht="10%"/>
+				<col widht="20%"/>
+				<col widht="20%"/>
+				<col widht="20%"/>
+				<col widht="20%"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" style="color: white;">사진</th>
+					<th scope="col" style="color: white;">아이디</th>
+					<th scope="col" style="color: white;">패스워드</th>
+					<th scope="col" style="color: white;">이름</th>
+					<th scope="col" style="color: white;">이메일</th>
+					<th scope="col" style="color: white;">권한</th>
+					<th scope="col" style="color: white;">가입일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:if="${#lists.size(searchList)} >0" th:each="vo : ${searchList}" > <!-- 데이터가 한 개 이상있는 경우 -->
+					<td>
+							<img th:src="'/images/'+${vo.filename}" width="120px">
+					</td>
+					<td >
+						<a th:href="@{/user/userSearchDetail/{id}(id=${vo.id})}"  th:text='${vo.id}'></a>
+						<!-- <a th:href="@{/user/userDetail/(id=${vo.id}}"> </a> -->
+					</td>
+					<td th:text='${vo.pw}' style="color: white;"></td>
+					<td th:text='${vo.name}' style="color: white;"></td>
+					<td th:text='${vo.email}' style="color: white;"></td>
+					<td th:text='${vo.role}' style="color: white;"></td>
+					<td th:text='${vo.joinDate}' style="color: white;"></td>
+				</tr>
+				<tr th:unless="${#lists.size(searchList)} >0"> <!-- 데이터가 없는 경우 -->
+					<td colspan="5">조회된 결과가 없습니다.</td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" class="btn btn-outline-secondary" style="float:right;">
+			<a href="/user/userInsert">사용자 추가</a>
+		</button>
+		
+	</div>
+	
+	            <nav id="pag" style="text-align: center;">
+                <ul class="pagination justify-content-center"
+                    th:with="start=${T(Math).floor(searchList.number/10)*10 + 1},
+                    last=(${start + 9 < searchList.totalPages ? start + 9 : searchList.totalPages})">
+                    
+                    <li class="page-item">
+                        <a class="page-link" th:href="@{'/user/search?keyword='+${keyword}+'&page=1'}" aria-label="First">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item" th:class="${searchList.first} ? 'disabled'">
+                        <a class="page-link" th:href="${searchList.first} ? '#' :@{'/user/search?keyword='+${keyword}+'&page='+${searchList.number}}" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item" th:each="page: ${#numbers.sequence(start, last)}" th:class="${page == searchList.number + 1} ? 'active'">
+                        <a class="page-link" th:text="${page}" th:href="@{'/user/search?keyword='+${keyword}+'&page='+${page}}"></a>
+                    </li>
+
+                    <li class="page-item" th:class="${searchList.last} ? 'disabled'">
+                        <a class="page-link" th:href="${searchList.last} ? '#' : @{'/user/search?keyword='+${keyword}+'&page='+${searchList.number + 2}}" aria-label="Next">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link" th:href="@{'/user/search?keyword='+${keyword}+'&page='+${searchList.totalPages}}" aria-label="Last">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+	
+
+</div>
+</html>
+
+
+
+<!--  
+<!DOCTYPE html>
+<html lang='ko' xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>사용자 리스트</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link><!-- 타임리프에서 하이퍼링크를 따로 걸어줌.
+</head>
+<body>
+</body>
+</html>-->
