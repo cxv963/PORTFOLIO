@@ -1,0 +1,13 @@
+프로그램을 실행하기 전
+
+컴퓨터 버전의 경우
+Fork (Computer)\ForkL_Data\sharedassets0.assets.zip의 압축을 풀고 진행하십시오.
+
+VR 버전의 경우
+Fork (VR)\ForkL_Data\sharedassets1.assets.zip의 압축을 풀고 진행하십시오.
+
+
+컴퓨터 버전의 경우 VR컨트롤러가 없을 경우에 실행하는 버전으로
+VR컨트롤러가 없어 UI에 접근이 불가능하기 때문에 UI가 제거된 버전입니다.
+
+추후 수정 예정입니다.
